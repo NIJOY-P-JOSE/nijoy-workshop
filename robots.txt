@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nijoy-p-jose.github.io/nijoy-workshop/sitemap.xml
