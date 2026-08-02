@@ -363,6 +363,37 @@ h1.hero-title .accent{color:var(--emerald);}
 #exit p.hand{font-size:1.4rem; color:#e8863a;}
 #exit .credit{font-family:var(--body); font-size:.78rem; color:#8a7862; margin-top:2.2rem;}
 
+/* ================= RESUME DRAWER ================= */
+#resume{background:var(--wood-dark); color:#fce9d2; text-align:center;}
+#resume .tag-eyebrow{color:var(--orange);}
+#resume .section-title{color:#fce9d2;}
+.resume-card{
+  max-width:480px; margin:0 auto; background:var(--paper); border-radius:12px; padding:2.4rem 2rem;
+  box-shadow:0 18px 34px -16px rgba(0,0,0,.45); position:relative; transform:rotate(-1deg);
+}
+.resume-card::before{
+  content:''; position:absolute; top:-14px; left:50%; transform:translateX(-50%); width:70px; height:14px;
+  background:var(--wood-light); border-radius:4px 4px 0 0;
+}
+.resume-card svg.doc-icon{width:64px; height:64px; margin-bottom:1rem;}
+.resume-card h3{color:var(--wood-dark); font-size:1.3rem; margin-bottom:.4rem;}
+.resume-card p{color:var(--ink-soft); font-weight:600; font-size:.9rem; margin-bottom:1.5rem;}
+.resume-btns{display:flex; gap:.9rem; justify-content:center; flex-wrap:wrap;}
+.resume-btns .btn{padding:.75rem 1.4rem; font-size:.85rem;}
+#resume-modal{
+  display:none; position:fixed; inset:0; z-index:400; background:rgba(36,26,18,.82);
+  align-items:center; justify-content:center; padding:2rem;
+}
+#resume-modal.open{display:flex;}
+.resume-modal-inner{
+  background:var(--paper); width:min(820px,100%); height:min(85vh,900px); border-radius:12px; overflow:hidden;
+  position:relative; box-shadow:0 20px 50px rgba(0,0,0,.5); display:flex; flex-direction:column;
+}
+.resume-modal-head{display:flex; justify-content:space-between; align-items:center; padding:.9rem 1.3rem; background:var(--beige); border-bottom:2px dashed var(--wood-light);}
+.resume-modal-head span{font-family:var(--display); font-weight:600; color:var(--wood-dark); font-size:.95rem;}
+.resume-modal-close{background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--wood-dark); line-height:1;}
+.resume-modal-inner iframe{flex:1; width:100%; border:none;}
+
 @media(max-width:600px){section{padding:4.2rem 0;}}
 </style>
 </head>
@@ -381,6 +412,7 @@ h1.hero-title .accent{color:var(--emerald);}
       <a href="#projects">Prototypes</a>
       <a href="#experience">Testing</a>
       <a href="#achievements">Shelf</a>
+      <a href="#resume">Resume</a>
       <a href="#contact">Say Hi</a>
     </div>
   </div>
@@ -548,7 +580,6 @@ h1.hero-title .accent{color:var(--emerald);}
         <div class="bp-detail">Graduated First-Class Distinction. The hardware foundation behind the lateral entry into CSE.</div>
         <span class="bp-badge">CGPA 8.99</span>
       </div>
-      <!-- TODO: fill in your actual 12th / HSS details, then remove this comment -->
       <div class="blueprint-card">
         <span class="bp-date hand">2022</span>
         <h3>Higher Secondary Education</h3>
@@ -615,7 +646,6 @@ h1.hero-title .accent{color:var(--emerald);}
             <li>MPU6050-based head tracking controlling a pan-tilt camera via Python and Arduino.</li>
             <li>Dual-mode Wi-Fi/Bluetooth control system using ESP32 and Blynk.</li>
           </ul>
-          <!-- TODO: replace # with the actual report PDF link -->
           <a class="proto-link" href="https://drive.google.com/file/d/1l8YmonDUHVVRuvW6dWuU9-hBPlZ5lfVO/view" target="_blank" rel="noopener">📄 Project Report</a>
         </div>
       </div>
@@ -644,7 +674,6 @@ h1.hero-title .accent{color:var(--emerald);}
             <li>Integrated Vertex AI (Gemini) and the GitHub API for contextual Q&amp;A from repo README files.</li>
             <li>Responsive interface with real-time project insights and repository analytics.</li>
           </ul>
-          <!-- TODO: replace # with the actual repo link -->
           <a class="proto-link" href="https://github.com/NIJOY-P-JOSE/VidyaVault" target="_blank" rel="noopener">🔗 Repository</a>
         </div>
       </div>
@@ -675,7 +704,6 @@ h1.hero-title .accent{color:var(--emerald);}
             <li>Six cooperating agents — Collector, Risk Assessment, Explanation, Remediation Planning, Safety Validation, and Execution.</li>
             <li>Offline assistant using Ollama and RAG, with a human-in-the-loop approval workflow before any action runs.</li>
           </ul>
-          <!-- TODO: replace # with the actual repo link -->
           <a class="proto-link" href="#" target="_blank" rel="noopener">🔗 Repository</a>
         </div>
       </div>
@@ -732,6 +760,39 @@ h1.hero-title .accent{color:var(--emerald);}
     </div>
   </div>
 </section>
+
+<!-- ================= RESUME DRAWER ================= -->
+<section id="resume">
+  <div class="wrap">
+    <span class="tag-eyebrow">bottom drawer —</span>
+    <h2 class="section-title reveal">The Resume</h2>
+    <div class="resume-card reveal">
+      <svg class="doc-icon" viewBox="0 0 64 64" fill="none">
+        <rect x="10" y="4" width="38" height="56" rx="4" fill="#EFE1C6" stroke="#6E4A2E" stroke-width="2.5"/>
+        <path d="M38 4v14h14" fill="#C08E5F" stroke="#6E4A2E" stroke-width="2.5" stroke-linejoin="round"/>
+        <line x1="17" y1="30" x2="41" y2="30" stroke="#6E4A2E" stroke-width="2.5"/>
+        <line x1="17" y1="38" x2="41" y2="38" stroke="#6E4A2E" stroke-width="2.5"/>
+        <line x1="17" y1="46" x2="33" y2="46" stroke="#6E4A2E" stroke-width="2.5"/>
+      </svg>
+      <h3>Nijoy P. Jose — Resume</h3>
+      <p>The short version of everything in this workshop, in one page.</p>
+      <div class="resume-btns">
+        <button class="btn btn-primary" id="resumeViewBtn" type="button">👀 View Resume</button>
+        <a class="btn btn-ghost" href="https://drive.google.com/uc?export=download&id=1jVdghWKJy3IpTncGsfNnRxV0oBFxxs5o" download="Nijoy_P_Jose_Resume.pdf">⬇️ Download</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="resume-modal">
+  <div class="resume-modal-inner">
+    <div class="resume-modal-head">
+      <span>Nijoy_P_Jose_Resume.pdf</span>
+      <button class="resume-modal-close" id="resumeModalClose" type="button" aria-label="Close">✕</button>
+    </div>
+    <iframe id="resumeIframe" src="" title="Nijoy P. Jose Resume"></iframe>
+  </div>
+</div>
 
 <!-- ================= COMMUNICATION DESK / CONTACT ================= -->
 <section id="contact">
@@ -809,6 +870,24 @@ gsap.from(".workshop-scene .layer", {opacity:0, y:30, duration:.9, delay:.4, sta
 /* exit door: dim lights as footer comes into view */
 gsap.to("#dimOverlay", {opacity:.35, ease:"none", scrollTrigger:{trigger:"#exit", start:"top 70%", end:"top 20%", scrub:true}});
 
+/* resume view modal */
+(function(){
+  const RESUME_URL = 'https://drive.google.com/file/d/1jVdghWKJy3IpTncGsfNnRxV0oBFxxs5o/view?usp=sharing';
+  const modal = document.getElementById('resume-modal');
+  const iframe = document.getElementById('resumeIframe');
+  const openBtn = document.getElementById('resumeViewBtn');
+  const closeBtn = document.getElementById('resumeModalClose');
+  openBtn.addEventListener('click', ()=>{
+    iframe.src = RESUME_URL;
+    modal.classList.add('open');
+  });
+  closeBtn.addEventListener('click', ()=>{
+    modal.classList.remove('open');
+    iframe.src = '';
+  });
+  modal.addEventListener('click', (e)=>{ if(e.target === modal){ modal.classList.remove('open'); iframe.src=''; } });
+})();
+
 /* copy to clipboard */
 const toast = document.getElementById('toast');
 document.querySelectorAll('[data-copy]').forEach(el=>{
@@ -826,10 +905,10 @@ document.querySelectorAll('[data-copy]').forEach(el=>{
 /* ---------- pegboard tools (skills) ---------- */
 (function(){
   const data = [
-    {id:'ai', label:'AI / LLM', icon:'robotarm', items:['LangGraph','LangChain','Ollama','RAG','Local LLMs','Prompt Engineering','Gemini / Vertex AI','OpenCV']},
-    {id:'web', label:'Full-Stack', icon:'laptop', items:['Django','Flask','FastAPI','REST APIs','HTML/CSS','Tailwind CSS','Bootstrap','Chart.js']},
     {id:'lang', label:'Languages', icon:'hammer', items:['Java','Python','C','JavaScript']},
+    {id:'web', label:'Full-Stack', icon:'laptop', items:['Django','Flask','FastAPI','REST APIs','HTML/CSS','Tailwind CSS','Bootstrap','Chart.js']},
     {id:'db', label:'Databases', icon:'cabinet', items:['MySQL','PostgreSQL','SQLite']},
+    {id:'ai', label:'AI / LLM', icon:'robotarm', items:['LangGraph','LangChain','Ollama','RAG','Local LLMs','Prompt Engineering','Gemini / Vertex AI','OpenCV']},
     {id:'hw', label:'Hardware / IoT', icon:'circuit', items:['Raspberry Pi','Arduino','ESP32','Linux']},
     {id:'tools', label:'Dev Tools', icon:'wrench', items:['Git','GitHub','Postman']},
     {id:'learning', label:'Currently Learning', icon:'bulb', items:['Data Structures & Algorithms','System Design','Backend Architecture','Low-Level Design']}  ];
