@@ -321,6 +321,16 @@ h1.hero-title .accent{color:var(--emerald);}
 .proto-card:hover .neural-illust .n-node{opacity:1;}
 .proto-card:hover .neural-illust .n-line{stroke-dashoffset:0;}
 
+/* ---- Event Approval Workflow hover animation ---- */
+.workflow-illust .w-stamp{transform:rotate(-18deg) translate(10px,-14px); transform-origin:70px 40px; transition:transform .4s ease;}
+.workflow-illust .w-check{opacity:0; transform:scale(.5); transform-origin:60px 95px; transition:opacity .3s .15s, transform .3s .15s;}
+.workflow-illust .w-line{stroke-dashoffset:24; transition:stroke-dashoffset .4s ease;}
+.proto-card:hover .workflow-illust .w-stamp{transform:rotate(0deg) translate(0,0);}
+.proto-card:hover .workflow-illust .w-check{opacity:1; transform:scale(1);}
+.proto-card:hover .workflow-illust .w-line{stroke-dashoffset:0;}
+
+      
+
 /* ================= TESTING AREA / EXPERIENCE ================= */
 .test-item{padding:1.7rem 1.8rem; margin-bottom:1.2rem; display:flex; gap:1.2rem; align-items:flex-start;}
 .test-icon{width:44px; height:44px; flex-shrink:0;}
@@ -677,6 +687,40 @@ h1.hero-title .accent{color:var(--emerald);}
           <a class="proto-link" href="https://github.com/NIJOY-P-JOSE/VidyaVault" target="_blank" rel="noopener">🔗 Repository</a>
         </div>
       </div>
+
+      
+      <div class="paper proto-card reveal">
+        <div class="proto-illust workflow-illust">
+          <svg viewBox="0 0 150 150" fill="none">
+            <rect x="35" y="24" width="70" height="92" rx="8" fill="#EFE1C6" stroke="#6E4A2E" stroke-width="3"/>
+            <rect x="55" y="16" width="30" height="16" rx="4" fill="#C08E5F" stroke="#6E4A2E" stroke-width="3"/>
+            <line class="w-line" x1="47" y1="48" x2="93" y2="48" stroke="#6FA3C4" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="46"/>
+            <line class="w-line" x1="47" y1="62" x2="93" y2="62" stroke="#6FA3C4" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="46" style="transition-delay:.08s"/>
+            <line class="w-line" x1="47" y1="76" x2="78" y2="76" stroke="#6FA3C4" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="46" style="transition-delay:.16s"/>
+            <circle class="w-check" cx="60" cy="95" r="13" fill="#4F9B7D"/>
+            <path class="w-check" d="M54 95l4 4 8-8" stroke="#EFE1C6" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <g class="w-stamp">
+              <circle cx="70" cy="40" r="17" fill="none" stroke="#E8863A" stroke-width="3.5"/>
+              <path d="M62 40l5 5 10-10" stroke="#E8863A" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </div>
+        <div>
+          <h3>Event Approval Workflow Automation System</h3>
+          <div class="proto-meta">Jan 2026 – Present · Full-Stack Developer</div>
+          <p class="proto-desc">A full-stack workflow automation platform that digitizes event approval, duty leave management, and role-based coordination for educational institutions.</p>
+          <div class="stack-row">
+            <span class="stack-chip">Next.js</span><span class="stack-chip">React</span><span class="stack-chip">Django</span><span class="stack-chip">Django REST Framework</span><span class="stack-chip">JWT Authentication</span><span class="stack-chip">SQLite</span><span class="stack-chip">Git</span>
+          </div>
+          <ul>
+            <li>Built a role-based event management platform with secure authentication, event creation, coordinator assignment, and profile management.</li>
+            <li>Developed REST APIs using Django REST Framework and integrated them with a responsive Next.js frontend.</li>
+            <li>Implemented a multi-stage approval workflow with real-time status tracking to streamline institutional event management.</li>
+          </ul>
+          <a class="proto-link" href="https://github.com/NIJOY-P-JOSE/event-approval-system" target="_blank" rel="noopener">🔗 Repository</a>
+        </div>
+      </div>
+            
 
       <div class="paper proto-card reveal">
         <div class="proto-illust neural-illust">
